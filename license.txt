@@ -1,0 +1,25 @@
+🤖 Nika-Ai Testing & Non-Commercial License
+1. License Grant and Use
+ * Licensor: [Sudeep]
+ * Product: Nika-Ai Chatbot (the "WebApp")
+
+ * Grant: The Licensor grants you (the "User") a non-exclusive, non-transferable, revocable license to use the Software solely for internal testing, evaluation, and non-commercial purposes.
+ * Prohibited Use: This license expressly prohibits any commercial use, public distribution, incorporation into commercial products, or use in any profit-generating activity.
+2. Testing and Feedback
+ * The User agrees to use the Software primarily for the purpose of identifying bugs, providing feedback, and evaluating its functionality and performance.
+ * Any feedback, suggestions, or ideas provided by the User regarding the Software shall be the exclusive property of the Licensor.
+3. No Warranty and Limitation of Liability
+ * The Software is provided "AS IS," with all faults and without warranty of any kind. The Licensor disclaims all warranties, express or implied, including but not limited to, the implied warranties of merchantability and fitness for a particular purpose.
+ * The Licensor shall not be liable for any damages (direct, indirect, incidental, or consequential) arising out of the use or inability to use the Software.
+
+
+🔒 Nika-Ai Testing Privacy Notice
+1. No Collection of Personal Data
+ * Policy: Nika-Ai is designed for testing purposes only. The Software does not collect, store, or process any Personally Identifiable Information (PII) or sensitive user data.
+ * Interaction Data: All conversational data (inputs and outputs) during the testing phase are processed solely to facilitate the chat interaction and for the immediate improvement and debugging of the underlying AI model.
+2. Data Handling for Testing
+ * Anonymity: All conversational inputs are treated as anonymous testing data.
+ * Retention: Conversational data may be temporarily logged by the Licensor for technical debugging and system improvement, but will be handled without any association to a specific user identity.
+3. Changes and Contact
+ * The Licensor reserves the right to modify this License and Privacy Notice.
+ * For questions regarding this license or the Software, please contact: [sudeepb9880@gmail.com].

@@ -1,0 +1,276 @@
+:root {
+    /* Dark Theme Colors */
+    --background-color: #121212;
+    --container-bg-color: #1e1e1e;
+    --header-bg-color: #282828;
+    --border-color: #333333;
+    --text-color: #e0e0e0;
+    --user-bubble-bg: #5a7dff; /* A vibrant blue */
+    --bot-bubble-bg: #2d2d2d;
+    --user-bubble-text: white;
+    --bot-bubble-text: #e0e0e0;
+    --input-bg-color: #2d2d2d;
+    --send-btn-bg: #5a7dff;
+    --send-btn-hover-bg: #3c5aff;
+    --attachment-btn-color: #999999; /* Color for the attachment icon */
+    --attachment-btn-hover-color: #e0e0e0;
+    --footer-text-color: #999999; /* Subtle color for footer text */
+    --link-color: #7aa1ff;
+    --facebook-color: #3b5998;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    /* --- MODIFIED: Use flex column to stack chat-container and footer --- */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* ------------------------------------------------------------------- */
+    height: 100vh;
+    height: 100dvh;
+    color: var(--text-color);
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 700px;
+    /* MODIFIED: Let chat-container take up available space, but not full height */
+    height: 100%; 
+    max-height: calc(100vh - 40px); /* Leave space for footer on desktop */
+    max-height: calc(100dvh - 40px); /* Dynamic height */
+    /* -------------------------------------------------------------------- */
+    background-color: var(--container-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Safe Area Insets (retained) */
+    padding-top: env(safe-area-inset-top, 0);
+    padding-bottom: env(safe-area-inset-bottom, 0);
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
+}
+
+.chat-header {
+    background-color: var(--header-bg-color);
+    color: white;
+    padding: 15px 20px;
+    text-align: center; 
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Scrollbar styling for a cleaner look in dark mode (Webkit) */
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a;
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background-color: var(--container-bg-color);
+}
+
+
+.message {
+    padding: 12px 18px;
+    border-radius: 20px; 
+    max-width: 80%;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.message.user {
+    background-color: var(--user-bubble-bg);
+    color: var(--user-bubble-text);
+    align-self: flex-end;
+    border-bottom-right-radius: 6px; 
+    border-top-right-radius: 20px;
+}
+
+.message.bot {
+    background-color: var(--bot-bubble-bg);
+    color: var(--bot-bubble-text);
+    align-self: flex-start;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 20px;
+    white-space: pre-wrap;
+}
+
+.chat-input-form {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--header-bg-color);
+    padding-bottom: calc(15px + env(safe-area-inset-bottom, 0));
+}
+
+/* Style for the attachment button */
+#attachment-button {
+    padding: 12px; 
+    width: 45px; 
+    height: 45px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    color: var(--attachment-btn-color);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: color 0.3s, background-color 0.3s, transform 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#attachment-button:hover {
+    color: var(--attachment-btn-hover-color);
+    background-color: #383838;
+}
+
+#attachment-button:active {
+    transform: scale(0.95);
+}
+
+#user-input {
+    flex: 1;
+    padding: 12px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    transition: border-color 0.3s;
+}
+
+#user-input:focus {
+    border-color: var(--send-btn-bg);
+}
+
+#send-button {
+    padding: 12px; 
+    width: 45px; 
+    height: 45px;
+    margin-left: 10px;
+    border: none;
+    background-color: var(--send-btn-bg);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#send-button:hover {
+    background-color: var(--send-btn-hover-bg);
+}
+
+#send-button:active {
+    transform: scale(0.95);
+}
+
+/* --- NEW: Footer Styling --- */
+.app-footer {
+    width: 100%;
+    max-width: 700px; /* Match container width */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.75rem;
+    color: var(--footer-text-color);
+    margin-top: 10px; /* Space between chat box and footer */
+}
+
+.footer-links a {
+    color: var(--link-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.facebook-link .social-icon {
+    /* Simple circle background for the 'f' icon */
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 2px;
+    background-color: var(--facebook-color);
+    color: white;
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin-right: 5px;
+}
+
+.separator {
+    color: var(--footer-text-color);
+}
+
+.copyright {
+    margin-top: 5px;
+}
+/* --------------------------- */
+
+
+/* --- Responsiveness --- */
+@media (max-width: 700px) {
+    body {
+        /* Align items to stretch vertically on mobile */
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    
+    .chat-container {
+        max-width: 100%;
+        height: 100dvh;
+        max-height: unset; /* Remove max height on small screens */
+        border-radius: 0;
+        box-shadow: none;
+        flex: 1; /* Make it take up the rest of the screen height */
+    }
+
+    .chat-header {
+        border-radius: 0;
+    }
+
+    /* Adjust footer margin for mobile view */
+    .app-footer {
+        max-width: 100%;
+        padding: 5px 0 10px;
+        margin-top: 0;
+        border-top: 1px solid var(--border-color);
+        background-color: var(--header-bg-color); /* Match header background */
+    }
+}

@@ -2,13 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>NIKA</title>
+    
+    <meta name="theme-color" content="#282828">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="NIKA Ai">
+    
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="apple-touch-icon" href="icon.png">
+
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T5CH8BWB');</script>
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T5CH8BWB');</script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,7 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 📎
             </label>
             
-            <input type="text" id="user-input" placeholder="Type ur message...">
+            <input type="text" id="user-input" placeholder="Type ur message..." autocomplete="off">
             <button id="send-button">✈️</button>
         </div>
     </div>
@@ -46,15 +57,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <script src="script.js"></script>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5CH8BWB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XMMF5SSSKQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XMMF5SSSKQ');
-</script>
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMMF5SSSKQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XMMF5SSSKQ');
+    </script>
 </body>
-
 </html>

@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // 🚨 IMPORTANT: Replace this with your NEW key. 
         // For a real mobile app, you should not put the key here.
-        const API_KEY = "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"; 
+        const API_KEY = "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"; 
 
         try {
             const response = await fetch(API_URL, {
@@ -106,4 +106,5 @@ document.addEventListener("DOMContentLoaded", () => {
             displayMessage("Error: Failed to fetch response.", "bot");
         }
     }
+
 });

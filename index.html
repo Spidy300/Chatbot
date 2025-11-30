@@ -11,9 +11,12 @@
     <meta name="apple-mobile-web-app-title" content="NIKA Ai">
     
     <link rel="manifest" href="manifest.json">
-    
     <link rel="apple-touch-icon" href="icon.png">
 
+    <!-- Added Font Awesome for Icons (Microphone, Loader) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Analytics code remains unchanged -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -25,28 +28,39 @@
 <body>
     <div class="chat-container">
         <div class="chat-header">
-            <h2>NIKA Ai 1.7</h2>
+            <h2>NIKA Ai 1.8 (Deep Scan Ready)</h2>
         </div>
         <div class="chat-messages" id="chat-messages">
             <div class="message bot">
-                YO WASS UPP?
+                YO WASS UPP? I'm NIKA Ai 1.8, now comming soon!! with quick text, voice support, and deep scan for images!
             </div>
         </div>
         <div class="chat-input-form">
-            <input type="file" id="attachment-input" style="display: none;">
-            
-            <label for="attachment-input" id="attachment-button" title="Attach File">
-                📎
+            <!-- File Attachment -->
+            <input type="file" id="attachment-input" style="display: none;" accept="image/*">
+            <label for="attachment-input" id="attachment-button" title="Attach Image">
+                <i class="fas fa-paperclip"></i>
             </label>
             
+            <!-- Microphone Button -->
+            <button id="voice-button" title="Start Voice Input"><i class="fas fa-microphone"></i></button>
+
             <input type="text" id="user-input" placeholder="Type ur message..." autocomplete="off">
-            <button id="send-button">✈️</button>
+            
+            <!-- Loading Spinner (initially hidden) -->
+            <div id="loading-spinner" class="spinner-container" style="display:none;">
+                <div class="loader"></div>
+            </div>
+
+            <button id="send-button" title="Send Message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
         </div>
     </div>
 
     <footer class="app-footer">
         <div class="footer-links">
-            <a href="license.txt" target="_blank" class="license-link">License</a>
+            <a href="license.md" target="_blank" class="license-link">License</a>
             <span class="separator">|</span>
             <a href="https://www.facebook.com/ig.acluffytaro" target="_blank" class="facebook-link">
                 <span class="social-icon">f</span> Facebook

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- Configuration ---
     // Using the Gemini API for multimodal (text/image) capabilities and quick response
     const API_MODEL = "gemini-2.5-flash";
-    const API_KEY = "AIzaSyCCSX3-RyoYS6xWMBS0E1CTRrl01KFxV_g"; // Canvas will provide this key at runtime
+    const API_KEY = "AIzaSyCSaw6BPm2q3JwOOkFYPj3WSV2LNZ5ssws"; // Canvas will provide this key at runtime
     const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${API_MODEL}:generateContent?key=${API_KEY}`;
     let isAwaitingResponse = false;
 
@@ -288,3 +288,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+

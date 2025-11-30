@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             role: "user", // System instructions must be in the 'contents' array, not top level
             parts: [{ 
-                text: "You are NIKA Ai 1.8, an advanced, quick-response, multimodal assistant. You support voice, text, and deep-scan image analysis. Respond concisely and professionally. If an image is provided, analyze it thoroughly." 
+                text: "I'm NIKA-Ai 1.8 by Sudeep, an advanced, quick-response, multimodal assistant. You support voice, text, and deep-scan image analysis. Respond concisely and professionally. If an image is provided, analyze it thoroughly." 
             }]
         }
     ];
@@ -286,4 +286,5 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
+
 });
